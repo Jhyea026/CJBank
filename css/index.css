@@ -6,17 +6,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 
-body {
-    background-size: 100%;
-    background: url('images/gta-money-1366x768.png');
+.background-im {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    filter: blur(2px);
+    z-index: -9;
 }
+
+.background-im img {
+    object-fit: cover;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -9;
+}
+
 
 
 .loginContainer{
     
     position: absolute ;
     width: 280px;
-    height: 360px;
+    height: 340px;
     left: 40%;
     top: 42%;
     background:rgba(125, 169, 104, 0.81);
@@ -68,14 +80,17 @@ input {
     border: 1px solid black;
 }
 
-.submit {
+
+a {
     position: relative;
+    top: 280px;
+    left: -24px;
+}
+
+.submit {
     height: 27px;
     width: 86px;
 
-    top: 14px;
-    left: 40px;
-    
     font-family: 'Inter', sans-serif;
     font-size: 12px;
 

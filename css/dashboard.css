@@ -128,7 +128,14 @@
     width: 133px;
     height: 133px;
     border-radius: 50%;
-    background: white;
+
+    background-image: url(../assets/images/agaragam.webp);
+    background-size: 100%;
+    background-position: center;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    
 }
 
 .dados {
@@ -212,18 +219,10 @@
     border: 2px solid #7DA968;
 }
 
-.label-saldo{
-    color: #7DA968;
-    position: relative;
-    font: 18px 'Inter', sans-serif;
-    font-weight: 700;
-    top: 10px;
-    left: 30px;
-}
-
 .icon-label {
     position: relative;
     top: 50%;
+    left: -3px;
     transform: translateY(-50%); 
     display: flex;
     gap: 10px;
@@ -251,7 +250,16 @@
 .saldo-val {
     position: relative;
     color: #7DA968;
-    font: 12px 'Inter', sans-serif;
-    top: 50px;
+    font: 14px 'Inter', sans-serif;
+    top: 43px;
     left: -46px;
+}
+    
+.label-saldo{
+    color: #7DA968;
+    position: relative;
+    font: 18px 'Inter', sans-serif;
+    font-weight: 700;
+    top: 10px;
+    left: 30px;
 }
