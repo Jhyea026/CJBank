@@ -1,6 +1,6 @@
 @font-face {
     font-family: Pricedown;
-    src: url(./pricedow.ttf);
+    src: url(../assets/fonts/pricedow.ttf);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -10,6 +10,9 @@
     padding: 0
 }
 
+body {
+    position: fixed;
+}
 /* Background  */
 .black-effect {
     position: absolute;
@@ -169,11 +172,19 @@
     left: -145px;
 }
 
+.icones-menu img{
+    width: 30px;
+}
+
+.icones-menu a {
+    height: 30px;
+}
+
 .icones-menu {
-    position: absolute;
+    position: relative;
     display: flex;
     gap: 10px;
-    top: 60px;
+    top: -8px;
     left: 900px;
 }
 
@@ -274,17 +285,18 @@
     width: 240px;
     height: 200px;
 
-    gap: 20px;
+    gap: 17px;
     border: 2px solid #7DA968;
     border-radius: 20px;
     
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;;
+    z-index: 10;
 }
 
 #cartao-cred {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 18px;
     align-self: center;
 }
@@ -293,29 +305,32 @@
     font-size: 12px;
     color: gray;
     align-self: flex-end;
-    margin: 0 25px 0 0;
+    margin: 0 43px 0 0;
 }
 
 #fatura-val-span {
+    font-size: 20px;
     font-weight: 700;
     color: #7DA968;
-    margin: 0 0 0 25px;
+    margin: -10px 0 5px 45px;
 }
 
 #limite-span {
     font-size: 12px;
     color: gray;
-    margin: -20px 0 0 25px;
+    margin: -20px 0 0 45px;
 }
 
 .credit button, .emprestimo button {
     align-self: center;
     margin-top: 15px;
-    padding: 0 10px 0 10px;
+    padding: 0 20px 0 20px;
     height: 30px;
+
     background-color: #7DA968;
     border-radius: 8px;
-    color: white
+    color: white;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -327,30 +342,32 @@
     width: 340px;
     height: 200px;
 
-    gap: 15px;
+    gap: 17px;
     border: 2px solid #7DA968;
     border-radius: 20px;
     
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', sans-serif;;
+    font-family: 'Inter', sans-serif;
+    z-index: 10;
 }
 
 #emp {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 18px;
     align-self: center;
 }
 
 #emp-atual {
+    margin: 10px 0 0 0;
     font-size: 14px;
-    color: gray;
+    color: rgba(111, 111, 111, 1);
     align-self: center;   
 }
 
 #mark {
     font-size: 12px;
-    color: gray;
+    color: rgba(150, 150, 150, 1);
     align-self: center;
-    margin: 0 25px 0 25px;
+    margin: 0 21px -10px 30px;
 }
