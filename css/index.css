@@ -104,6 +104,18 @@ a {
 
 }
 
-/* .submit:hover {
-    background: #00FF00;
-} */
+.submit:hover {
+    cursor: pointer;
+}
+
+.registro {
+position: absolute;
+left: 46px;
+top: 300px;
+font-family: 'Inter', sans-serif;
+font-style: normal;
+font-size: 7px;
+line-height: 15px;
+color: #000000;
+text-decoration: none;
+}

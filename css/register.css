@@ -1,0 +1,171 @@
+@font-face {
+    font-family: PriceDown;
+    src: url(../assets/fonts/pricedow.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+.background-im {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    filter: blur(2px);
+    z-index: -9;
+}
+
+.background-im img {
+    object-fit: cover;
+    position: absolute;
+    width: 98.79vw;
+    
+    z-index: -9;
+}
+
+
+
+.registerContainer{
+    position: absolute ;
+    display: flex;
+    justify-content: center;
+    width: 441px;
+    height: 616px;
+    left: 36%;
+    top: 13%;
+    background:rgba(125, 169, 104, 0.904);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.logoContainer{
+    display: flex;
+    position: absolute;
+    width: 175px;
+    height: 52px;
+    justify-content: center;
+    top: 38px;
+}
+.CJBank {
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    
+    position: relative;
+    color: white;
+    font-size: 70px;
+    font-family: PriceDown;
+    position: absolute;
+    
+}
+.titleContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    height: 59px;
+    top: 112px;
+}
+
+.title {
+    font: 22px 'Inter', sans-serif;
+    font-weight: 700;
+    position: relative;
+}
+
+#subTitle {
+    font: 14px 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.formsContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 256.53px;
+    height: 293.09px;
+    top: 190px;
+}
+
+.inputForms{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#login-form {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    margin: 10px 0 10px 0;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+input {
+    width: 248px;
+    height: 30px;
+    border: none;
+    margin: 5px 0 20px 0;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 2px solid black;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.submitContainer{
+    position: absolute;
+    width: 124px;
+    height: 39px;
+    top: 513px;
+}
+
+a {
+    top: 280px;
+    left: -24px;
+}
+
+.submit {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+
+    border: none;
+    border-radius: 3px;
+    background: rgba(175, 217, 164, 1);
+    border: 2px solid black;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.loginBack {
+position: absolute;
+display: flex;
+justify-content: center;
+left: 105px;
+top: 564px;
+font-family: 'Inter', sans-serif;
+font-style: normal;
+font-size: 10px;
+line-height: 15px;
+color: #000000;
+text-decoration: none;
+}
