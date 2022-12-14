@@ -2,6 +2,7 @@
 <html lang="pt">
 <head>
     <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../JS/abrirModal.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,10 +87,22 @@
     <div class="main">
 
         <div class="card-flex">
-            <div class="card saldo">
+            <div class="card saldo" id="open-modal">
                 <span class="label-saldo">Saldo</span>
                 <img src="../assets/images/card-icons/Cash.png" alt="Cash">
                 <span class="saldo-val">R$ 0.00</span>
+            </div>
+
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <div class="modal-header">
+                    <h2>Este é o modal</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt, voluptates consequatur corporis nobis magnam fuga eaque! Ipsum cum deleniti enim officiis doloremque non ea alias, error natus magni culpa.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In provident deleniti animi vero, a nisi accusantium obcaecati officiis cumque praesentium quisquam fugit cum eos, recusandae molestias tenetur beatae error facilis!</p>
+                </div>
+                <div id="close-modal">Cancelar</div>
             </div>
 
             <div class="card">
