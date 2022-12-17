@@ -3,42 +3,47 @@ class Emprestimo
 {
     public $id;
     public $valor;
-    public $numParcela;
-    public $valorParcela;
+    public $numeroParcelas;
+    public $valorParcelas;
 
-    public function __construct($valor, $parcela, $valorParcela)
+    public function __construct($valor, $parcelas, $valorParcelas)
     {
         $this->valor = $valor;
-        $this->numParcela = $parcela;
-        $this->valorParcela = $valorParcela;
+        $this->numeroParcelas = $parcelas;
+        $this->valorParcelas = $valorParcelas;
     }
 
-    public function getValor()
-    {
-        return $this->valor;
+    
+    public static function get($con, $id){
+        $sql = "SELECT * FROM Emprestimos WHERE idEmprestimo='$id'";
+        $result = $con->query($sql);
+        $row = $result->fetch();
+        return new Emprestimo($row['valor'], $row['numeroParcelas'], $row['valorParcelas']);
     }
-    public function getParcela()
+    
+    public static function getAll($con)
     {
-        return $this->numParcela;
+        $sql = "SELECT * FROM Emprestimos";
+        $result = $con->query($sql);
+        foreach ($result as $row) {
+            $emprestimos[] = new Emprestimo($row['valor'], $row['numeroParcelas'], $row['valorParcelas']);
+        }
+        return $emprestimos;
     }
-    public function getValorParcela()
-    {
-        return $this->valorParcela;
+    public static function create($con,$id, $valor, $parcelas, $valorParcelas){
+        $sql = "INSERT INTO Emprestimos (id,valor,numeroParcelas,valorParcelas) VALUES ('$id','$valor','$parcelas','$valor";
+        $con->query($sql);
     }
 
-    public function setValor($valor)
-    {
-        $this->valor = $valor;
+    public static function update($con, $id, $valor, $parcelas, $valorParcelas){
+        $sql = "UPDATE Emprestimos SET valor='$valor', numeroParcelas='$parcelas', valorParcelas='$valorParcelas' WHERE idEmprestimo='$id'";
+        $con->query($sql);
     }
 
-    public function setParcela($parcela)
+    public static function delete($con, $id)
     {
-        $this->numParcela = $parcela;
-    }
-
-    public function setValorParcela($valorParcela)
-    {
-        $this->valorParcela = $valorParcela;
+        $sql = "DELETE FROM Emprestimos WHERE idEmprestimo='$id'";
+        $con->query($sql);
     }
 }
 
