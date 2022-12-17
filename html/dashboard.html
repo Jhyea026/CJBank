@@ -95,14 +95,35 @@
 
             <div id="fade" class="hide"></div>
             <div id="modal" class="hide">
-                <div class="modal-header">
-                    <h2>Este é o modal</h2>
+                <div class="modal-header-container">
+                    <h2 id="header-modal-text">Adicionar dinheiro</h2>
+                </div>
+                <div class="division-modal-container">
+                    <hr id="division-modal-line-top"/>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt, voluptates consequatur corporis nobis magnam fuga eaque! Ipsum cum deleniti enim officiis doloremque non ea alias, error natus magni culpa.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In provident deleniti animi vero, a nisi accusantium obcaecati officiis cumque praesentium quisquam fugit cum eos, recusandae molestias tenetur beatae error facilis!</p>
+                    <h2 id="add-title">Qual o valor que você deseja adicionar?</h2>
+                   <div class="value-container">
+                    <h2 id="text-value">Valor:</h2>
+                    <input id="input-value" type="number"/>
+                   </div> 
+                   <div class="suggestions-container">
+                    <div class="suggestions-text-container">
+                        <h2 id="suggestions-text">Sugestões:</h2>
+                    </div>
+                    <div class="suggestions-buttons-container">
+                        <button class="suggestions-buttons" type="button">+5</button>
+                        <button class="suggestions-buttons" type="button">+10</button>
+                        <button class="suggestions-buttons" type="button">+20</button>
+                        <button class="suggestions-buttons" type="button">+50</button>
+                    </div>
+                   </div>
+                </div>
+                <div class="division-modal-container">
+                    <hr id="division-modal-line-botton"/>
                 </div>
                 <div id="close-modal">Cancelar</div>
+                <div id="add-money">Adicionar</div>
             </div>
 
             <div class="card">
