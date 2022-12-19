@@ -266,7 +266,7 @@ body {
     top: 43px;
     left: -46px;
 }
-    
+
 .label-saldo{
     color: #7DA968;
     position: relative;
@@ -276,13 +276,14 @@ body {
     left: 30px;
 }
 
-#fade, #modal {
+/*Inicio da estilização do modal de adicionar dinheiro*/
+#fade, #modal, #fade2, #modal2 {
     transition: 0.5s;
     opacity: 1;
     pointer-events: all;
 }
 
-#fade {
+#fade,#fade2  {
     position: fixed;
     top: 0;
     left: 0;
@@ -292,7 +293,7 @@ body {
     z-index: 5;
 }
 
-#modal {
+#modal,#modal2 {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -309,12 +310,12 @@ body {
     border-radius: 20px;
 }
 
-#modal.hide, #fade.hide{
+#modal.hide, #fade.hide, #fade2.hide, #modal2.hide{
     opacity: 0;
     pointer-events: none;
 }
 
-#modal.hide{
+#modal.hide, #modal2.hide{
     top: 0;
 }
 
@@ -325,7 +326,7 @@ body {
     height: 49px;
 }
 
-#header-modal-text{
+.header-modal-text{
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -334,7 +335,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-#division-modal-line-top{
+.division-modal-line-top{
     position: absolute;
     width: 619px;
     left: 39px;
@@ -343,7 +344,7 @@ body {
 
 }
 
-.modal-body{
+.modal-add-body{
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -450,7 +451,7 @@ body {
     color: #7DA968;
 }
 
-#division-modal-line-botton{
+.division-modal-line-botton{
     position: absolute;
     width: 619px;
     left: 39px;
@@ -459,7 +460,7 @@ body {
     
 }
 
-#close-modal{
+#close-modal, #closePixModal{
     position: absolute;
     display: flex;
     justify-content: center;
@@ -485,7 +486,7 @@ body {
     bottom: 21px;
 }
 
-#add-money{
+#add-money, #transfer-money{
     position: absolute;
     display: flex;
     justify-content: center;
@@ -504,6 +505,105 @@ body {
     border: 2px solid #000000;
     border-radius: 10px;
 }
+/*Fim da estilização do modal de adicionar dinheiro*/
+
+/*Inicio da estilização do body do modal de transferencia*/
+.modal-transfer-body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 333px;
+}
+
+#transfer-title, #value-transfer-title{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #7DA968;
+}
+
+.agcc-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 380px;
+    height: 63px;
+}
+
+.ag-container, .cc-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ag-text, #cc-text, #value-text-transfer{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #7DA968;
+}
+
+#ag-input, #cc-input{
+    width: 160px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 2px solid rgba(125, 169, 104, 0.81);
+    border-radius: 10px;
+}
+
+.value-transfer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 233px;
+    height: 30px;
+}
+
+#value-input-transfer{
+    width: 160px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 2px solid rgba(125, 169, 104, 0.81);
+    border-radius: 10px;
+}
+
+/* Posicionamento dos elementos do body do modal de transferencia */
+#transfer-title{
+    position: absolute;
+    top: 119px;
+}
+
+.agcc-container{
+    position: absolute;
+    top: 163px;
+}
+
+#value-transfer-title{
+    position: absolute;
+    top: 276px;
+}
+
+.value-transfer-container{
+    position: absolute;
+    top: 333px;
+}
+
+
+
+
+
+
+
+/*Fim da estilização do body do modal de transferencia*/
+
 /* Card */
 .credit {
     position: absolute;
