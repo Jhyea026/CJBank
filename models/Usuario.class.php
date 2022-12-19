@@ -33,10 +33,23 @@ class Usuario
 
     public static function create($con, $nome, $cpf, $dataNascimento, $senha)
     {
-        echo "create\n {$nome}, {$cpf}, {$dataNascimento}, {$senha}\n";
         $sql = "INSERT INTO Usuario (nome, cpf, dataNascimento, senha) VALUES ('$nome', '$cpf', '$dataNascimento', '$senha')";
         $con->query($sql);
 
+        return $con->lastInsertId();
+    }
+
+    public static function buscarUsuario($con, $cpf, $senha){
+
+        $sql = "SELECT * FROM Usuario WHERE cpf='$cpf' AND senha='$senha'";
+        $result = $con->query($sql);
+        $row = $result->fetch(PDO::FETCH_OBJ);
+
+        if ($result->num_rows <=0) {
+            return;
+        }else{
+            return $row['idUsuario'];
+        }
     }
 
     public static function update($con, $id, $nome, $cpf, $dataNascimento, $senha){

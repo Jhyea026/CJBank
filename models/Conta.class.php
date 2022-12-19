@@ -33,15 +33,17 @@ class Conta
         return $contas;
     }
 
-    public static function create($con, $idUsuario, $agencia, $numeroConta, $saldo, $possuiEmprestimo=false){
-        $sql = "INSERT INTO Conta (idUsuario, agencia, numeroConta, saldo, existeEmprestimo) VALUES (,($idUsuario,'$agencia', '$numeroConta', '$saldo', '$possuiEmprestimo')";
+    public static function create($con, $idUsuario, $agencia, $numeroConta, $saldo, $possuiEmprestimo = 0){
+        echo "Conta $agencia, $numeroConta, $saldo, $possuiEmprestimo)";
+        $sql = "INSERT INTO Conta (idUsuarioRef, agencia, numeroConta, saldo, possuiEmprestimo) VALUES ($idUsuario,'$agencia', '$numeroConta', '$saldo', '$possuiEmprestimo')";
         $con->query($sql);
-        return $con->getLastId();
+
+        return $con->lastInsertId();
     }
 
     public static function update($con, $id, $agencia, $numeroConta, $saldo, $possuiEmprestimo)
     {
-        $sql = "UPDATE Conta SET agencia='$agencia', numeroConta='$numeroConta', saldo='$saldo', possuiEmprestimo='$possuiEmprestimo' WHERE idConta='$id'";
+        $sql = "UPDATE Conta SET agencia='$agencia', numeroConta='$numeroConta', saldo='$saldo', possuiEmprestimo=  $possuiEmprestimo WHERE idConta='$id'";
         $con->query($sql);
     }
 
@@ -49,6 +51,14 @@ class Conta
     {
         $sql = "DELETE FROM Conta WHERE idConta='$id'";
         $con->query($sql);
+    }
+
+    public static function buscarContaPorUsuario($con, $idUsuario){
+        $sql = "SELECT * FROM Conta WHERE idUsuario='$idUsuario'";
+        $result = $con->query($sql);
+        $row = $result->fetch();
+
+        return new Conta($row['agencia'], $row['numeroConta'], $row['saldo'], $row['existeEmprestimo']);
     }
 }
 ?>
