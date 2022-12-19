@@ -15,17 +15,17 @@
     <div class="loginContainer">
         <span class="CJBank">CJBank</span>
         <span class="bem-vindo">Seja bem-vindo</span>
-        <form id='formLogin' autocomplete="off" method="POST" action="../interface_integration/register_back.php" onsubmit="validForm()">
+        <form id='formLogin' autocomplete="off" method="POST" action="../interface_integration/login_back.php" onsubmit="validForm()">
             <a id="login-form">
                 
                 <div class="inputLogin">
                     <label for="login">Login</label>
-                    <input type="text" id="login">
+                    <input type="text" id="login" name="login">
                 </div>
 
                 <div class="inputSenha">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha">
+                    <input type="password" id="senha" name="senha">
                 </div>
 
                 <a href="./dashboard.php"><button class="submit" >Entrar</button></a>

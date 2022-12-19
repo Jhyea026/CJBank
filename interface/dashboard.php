@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        require_once "../dbmanager/connectdb.php";
+        require_once "../models/Usuario.class.php";
+        $id_usuario = $_COOKIE('usuario');
+        $usuario = Usuario::get($con,$usuario_conta);
+        $conta = Conta::buscarContaPorUsuario($con, $id_usuario)
+    ?>
     <div class="black-effect"></div>
     <div class="background-im"><img src="../assets/images/gta-money-1366x768.png" alt="background-im"></div>
     <div class="side-bar">
@@ -71,9 +78,9 @@
     <div class="header">
         <span class="avatar"></span>
         <div class="dados">
-            <span class="nome">Carl Jhonson</span>
-            <span class="agencia">Agência: 0001</span>
-            <span class="conta">Conta: 1234-5</span>
+            <span class="nome"><?php echo $usuario->nome?></span>
+            <span class="agencia"><?php echo $conta->agencia?></span>
+            <span class="conta"><?php echo $conta->numeroConta?></span>
         </div>
 
         <div class="icones-menu">

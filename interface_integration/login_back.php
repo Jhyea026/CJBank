@@ -10,6 +10,6 @@
 
     if ($user) {
         setcookie('usuario', $user);
-        header('Location: dashboard.php');
+        header('Location: ../interface/dashboard.php');
     }
 ?>

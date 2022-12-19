@@ -16,8 +16,9 @@ $dataNasc = $_POST['dataNasc'];
 $senha = $_POST['senha'];
 
 $id = Usuario::create($connection, $nome, $cpf, $dataNasc, $senha);
-$number_account_digits = rand(100000, 999999);
+$number_account_digits = rand(1000, 9999);
+$number_account_verif = rand(0, 9);
 
-Conta::create($connection, $id, '1010', $number_account_digits, 0);
+Conta::create($connection, $id, '1010', "$number_account_digits-$number_account_verif", 0);
 header('Location: ../interface/index.php');
 ?>
