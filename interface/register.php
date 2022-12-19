@@ -28,7 +28,11 @@
             <span id="subTitle">CJBank deixa sua vida mais fácil como se fosse um jogo.</span>
         </div>
 
+<<<<<<< HEAD
         <form method="POST" action="../interface_integration/register_back.php" onsubmit="validForm()">
+=======
+        <form method="POST" autocomplete="off" action="../interface_integration/register_back.php" onsubmit="validForm()">
+>>>>>>> integracao
 
             <div class="formsContainer" onsubmit="">
                 <div class="inputForms">
