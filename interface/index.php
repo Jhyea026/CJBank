@@ -11,7 +11,6 @@
     <div class="background-im">
         <img src="../assets/images/gta-money-1366x768.png" alt="background-im">
     </div>
-
     <div class="loginContainer">
         <span class="CJBank">CJBank</span>
         <span class="bem-vindo">Seja bem-vindo</span>
@@ -27,9 +26,6 @@
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha">
                 </div>
-                <?php if(isset($_SESSION['erro'])) {
-                    echo "<script alert('CPF e/ou senha inválida!')></script>";
-                }?>
 
                 <a><button class="submit" >Entrar</button></a>
 

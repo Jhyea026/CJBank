@@ -24,7 +24,9 @@ error_reporting(E_ALL);
         require_once "../models/Usuario.class.php";
 
         session_start();
+
         $idConta = $_SESSION['idConta'];
+        
         $idUsuario = $_SESSION['login'];
         $usuario = Usuario::get($connection, $idUsuario);
         $conta = Conta::get($connection, $idConta);

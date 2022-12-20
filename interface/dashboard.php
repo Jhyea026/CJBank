@@ -109,7 +109,7 @@ $login_cookie = $_SESSION["login"];
         <div class="icones-menu">
             <img src="../assets/images/menu-icons/Settings.png" alt="config">
             <img src="../assets/images/menu-icons/Help.png" alt="config">
-            <a href="index.php" onclick="<?php session_destroy() ?>"><img src="../assets/images/menu-icons/Logout.png" alt="config"></a>
+            <a href="index.php"><img src="../assets/images/menu-icons/Logout.png" alt="config"></a>
         </div>
     </div>
 

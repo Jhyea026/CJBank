@@ -13,25 +13,14 @@ error_reporting(E_ALL);
     $login = $_POST['login'];
     $senha = $_POST['senha'];
 
-    if($login != '' && $senha!= '')
-    {
-        
-        $logId = Usuario::buscarUsuario($connection, $login, $senha);
-        
-        if ($logId) {
-            session_start();
-            $_SESSION['login'] = $logId;
-            header('Location: ../interface/dashboard.php');
-        } else {            
-            header('Location:../interface/index.php');
-            sleep(3);
-            echo "<script>alert('Este login não existe');</script>";
-            
-        }
+    if ($login != '' && $senha != '') {
+
+    $logId = Usuario::buscarUsuario($connection, $login, $senha);
+
+    if ($logId) {
+        session_start();
+        $_SESSION['login'] = $logId;
+        header('Location: ../interface/dashboard.php');
     }
-    else{
-        header('Location:../interface/index.php');
-        sleep(3);
-        echo "<script>alert('Campos vazios');</script>";
-    }
+}
 ?>  
