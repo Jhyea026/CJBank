@@ -45,12 +45,14 @@ $login_cookie = $_SESSION["login"];
         </div>
 
         <div class="options">
+            <a href="./extrato.php" style="text-decoration: none; color: black;">
             <div class="option-item">
                 <div class="option-label">
                     <img src="../assets/images/sidebar-images/Receipt Dollar.png" alt="label"></img>
                     <span>Extrato</span>
                 </div>
             </div>
+            </a>
             <div class="option-item pixModal">
                 <div class="option-label">
                     <img src="../assets/images/sidebar-images/Money Circulation.png" alt="label"></img>
@@ -107,7 +109,7 @@ $login_cookie = $_SESSION["login"];
         <div class="icones-menu">
             <img src="../assets/images/menu-icons/Settings.png" alt="config">
             <img src="../assets/images/menu-icons/Help.png" alt="config">
-            <a href="index.html"><img src="../assets/images/menu-icons/Logout.png" alt="config"></a>
+            <a href="index.php"><img src="../assets/images/menu-icons/Logout.png" alt="config"></a>
         </div>
     </div>
 

@@ -2,12 +2,12 @@
 <?php
 
 class Transferencia {
-    private $id;
-    private $idConta;
-    private $data;
-    private $valor;
-    private $remetente;
-    private $destinatario;
+    public $id;
+    public $idConta;
+    public $data;
+    public $valor;
+    public $remetente;
+    public $destinatario;
 
     public function __construct($data, $valor, $remetente, $destinatario)
     {
@@ -24,8 +24,9 @@ class Transferencia {
         return new Transferencia($row['data'], $row['valor'], $row['remetente'], $row['destinatario']);
     }
 
-    public function getAll($con){
-        $sql = "SELECT * FROM transferencia";
+    public static function getAll($con, $idConta){
+        $sql = "SELECT * FROM Transferencia WHERE remetente = $idConta OR destinatario = $idConta";
+
         $result = $con->query($sql);
         foreach ($result as $row) {
             $transferencias[]= new Transferencia($row['data'], $row['valor'], $row['remetente'], $row['destinatario']);

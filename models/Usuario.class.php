@@ -53,6 +53,7 @@ class Usuario
         $con->query($sql);
     }
 
+
     public static function delete($con, $id)
     {
         $sql = "DELETE FROM Usuario WHERE idUsuario='$id'";
