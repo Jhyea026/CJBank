@@ -109,7 +109,7 @@ $login_cookie = $_SESSION["login"];
         <div class="icones-menu">
             <img src="../assets/images/menu-icons/Settings.png" alt="config">
             <img src="../assets/images/menu-icons/Help.png" alt="config">
-            <a href="index.php"><img src="../assets/images/menu-icons/Logout.png" alt="config"></a>
+            <a href="index.php" onclick="<?php session_destroy() ?>"><img src="../assets/images/menu-icons/Logout.png" alt="config"></a>
         </div>
     </div>
 
@@ -180,7 +180,7 @@ $login_cookie = $_SESSION["login"];
                 <div class="modal-transfer-body">
                     <h2 id="transfer-title">Para qual conta deseja transferir?</h2>
                     <div class="agcc-container">
-                    <form action="../interface_integration/realizar_transferencia.php" method="POST">
+                    <form action="../interface_integration/realizar_transferencia.php" method="POST" class="form-container">
                         <div class="ag-container">
                             <h2 id="ag-text">Agência:</h2>
                             <input id="ag-input" name="agenciaDestino"/>
@@ -212,12 +212,15 @@ $login_cookie = $_SESSION["login"];
                 </div>
             </div>
 
-            <div class="card">
-                <div class="icon-label">
-                    <img src="../assets/images/card-icons/Receipt Dollar.png" alt="pix">
-                    <span>Extrato</span>
+            <a href="./extrato.php" style="text-decoration: none; color: black;">
+                <div class="card">
+                    
+                    <div class="icon-label">
+                        <img src="../assets/images/card-icons/Receipt Dollar.png" alt="pix">
+                        <span>Extrato</span>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="credit">

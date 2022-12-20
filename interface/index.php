@@ -27,8 +27,11 @@
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha">
                 </div>
+                <?php if(isset($_SESSION['erro'])) {
+                    echo "<script alert('CPF e/ou senha inválida!')></script>";
+                }?>
 
-                <a href="./dashboard.php"><button class="submit" >Entrar</button></a>
+                <a><button class="submit" >Entrar</button></a>
 
                 <a href="./register.php" class="registro">
                     <h2 >Não é cliente CJbank? Crie sua conta.</h2>

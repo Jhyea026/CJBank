@@ -43,6 +43,11 @@ class Usuario
 
         $sql = "SELECT * FROM Usuario WHERE cpf='$cpf' AND senha='$senha'";
         $result = $con->query($sql);
+
+        if ($result->rowCount() == 0) {
+            return 0;
+        }
+
         $row = $result->fetch();
         
         return $row['idUsuario'];
