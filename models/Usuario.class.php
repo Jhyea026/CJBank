@@ -43,13 +43,9 @@ class Usuario
 
         $sql = "SELECT * FROM Usuario WHERE cpf='$cpf' AND senha='$senha'";
         $result = $con->query($sql);
-        $row = $result->fetch(PDO::FETCH_OBJ);
-
-        if ($result->num_rows <=0) {
-            return;
-        }else{
-            return $row['idUsuario'];
-        }
+        $row = $result->fetch();
+        
+        return $row['idUsuario'];
     }
 
     public static function update($con, $id, $nome, $cpf, $dataNascimento, $senha){
