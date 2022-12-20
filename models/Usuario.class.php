@@ -43,6 +43,11 @@ class Usuario
 
         $sql = "SELECT * FROM Usuario WHERE cpf='$cpf' AND senha='$senha'";
         $result = $con->query($sql);
+
+        if ($result->rowCount() == 0) {
+            return 0;
+        }
+
         $row = $result->fetch();
         
         return $row['idUsuario'];
@@ -52,6 +57,7 @@ class Usuario
         $sql = "UPDATE Usuario SET nome='$nome', cpf='$cpf', dataNascimento='$dataNascimento', senha='$senha' WHERE idUsuario='$id'";
         $con->query($sql);
     }
+
 
     public static function delete($con, $id)
     {

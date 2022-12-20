@@ -19,8 +19,8 @@ error_reporting(E_ALL);
     $contaRemetente = $_SESSION['idConta'];
 
     echo date('m-d-Y');
-    Transferencia::create($connection, $contaRemetente, date('Y-m-d'), $valor, $contaRemetente, $contaDestino);
-    Transferencia::create($connection, $contaDestino, date('Y-m-d'), $valor, $contaDestino, $contaRemetente);
+    Transferencia::create($connection, $contaRemetente, date('Y-m-d'), $valor, $contaRemetente, $contaDestino);/* 
+    Transferencia::create($connection, $contaDestino, date('Y-m-d'), $valor, $contaDestino, $contaRemetente); */
     
     Conta::realizarTransferencia($connection, $contaRemetente, $contaDestino, $valor);
     header("Location: ../interface/dashboard.php");

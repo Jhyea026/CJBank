@@ -76,6 +76,16 @@ class Conta
         return $row['idConta'];
     }
 
+    public static function buscaUsuarioPorIdConta($con, $idConta)
+    {
+        $sql = "SELECT * FROM Conta WHERE idConta='$idConta'";
+        $result = $con->query($sql);
+        $row = $result->fetch();
+        $idUsuario = $row['idUsuarioRef'];
+
+        return $idUsuario;
+    }
+
     public static function realizarTransferencia($con, $idRemetente, $idDestinatario, $valor){
         $contaRemetente = Conta::get($con, $idRemetente);
         $contaDestinatario = Conta::get($con, $idDestinatario);
