@@ -1,0 +1,328 @@
+@font-face {
+    font-family: Pricedown;
+    src: url(../assets/fonts/pricedow.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    
+}
+
+body {
+    position: fixed;
+}
+/* Background  */
+.black-effect {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: -2;
+}
+
+.background-im {
+    top: -4px;
+    position: absolute;
+    filter: blur(2.5px);
+    z-index: -9;
+}
+
+.background-im img {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -9;
+}
+
+/* Barra lateral */
+
+.side-bar {
+    position: absolute;
+    width: 193px;
+    height: 100vh;
+    z-index:1
+}
+
+.logo {
+    font-family: Pricedown;
+    position: relative;
+}
+
+#CJ {
+    top: 40px;
+    left: -22px;
+    font-size: 108px;
+    color: #fff;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 4px;
+}
+
+#bank {
+    font-size: 36px;
+    top: 15px;
+    left: 39px;
+    color: #fff;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+}
+
+.logo-container {
+    margin-left: 60px;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    margin-left: 36px;
+}
+
+.option-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+    height: 40px;
+    text-align: center;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font: 14px 'Inter', sans-serif;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.option-item:hover {
+    background-color: #7DA968;
+}
+
+.option-item:active {
+    background-color: #263520;
+    color: white;
+}
+/* Area de cabeçalho */
+
+.header {
+    position: absolute;
+    background: rgba(125, 169, 104, 1);
+    left: 200px;
+    z-index: 2;
+    width: 1166px;
+    height: 30vh;
+    border-radius: 0 0 20px 20px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.avatar {
+    margin-top: 25px;
+    margin-left: 80px;
+    display: block;
+    width: 133px;
+    height: 133px;
+    border-radius: 50%;
+
+    background-image: url(../assets/images/agaragam.webp);
+    background-size: 100%;
+    background-position: center;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    
+}
+
+.dados {
+    position: relative;
+    margin-top: -100px;
+    margin-left: 250px;
+    font-family: 'Inter', sans-serif;
+    color:#fff
+}
+
+.nome {
+    font-family: Pricedown;
+    top: -10px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    position: relative;
+    font-size: 64px;
+}
+
+.agencia {
+    position: relative;
+    font-size: 18px;
+    left: -195px;
+    top: 30px;
+}
+
+.conta {
+    position: relative;
+    font-size: 18px;
+    top: 30px;
+    left: -145px;
+}
+
+.icones-menu img{
+    width: 30px;
+}
+
+.icones-menu a {
+    height: 30px;
+}
+
+.icones-menu {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    top: -8px;
+    left: 900px;
+}
+
+/* Area principal */
+
+.main {
+    position: relative;
+    left: 200px;
+    width: 1166px;
+    height: 100vh;
+    background: white;
+}
+
+.card-main{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 949px;
+    height: 388px;
+    left: 112px;
+    top: 242px;
+    background: #7DA968;
+    border-radius: 10px;
+}
+
+#card-title{
+    position: absolute;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #FFFFFF;
+    top: 16px;
+}
+
+.header-card{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 881px;
+    height: 25px;
+    left: 34px;
+    top: 67px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.content-container{
+    position: absolute;
+    width: 881px;
+    height: 260px;
+    left: 34px;
+    top: 110px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.content-container::-webkit-scrollbar{
+    display: none;
+}
+.content-card{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 881px;
+    height: 46px;
+    background: #B0D8A4;
+    margin-bottom: 10px;
+}
+
+.content-card:last-child{
+    margin: 0;
+}
+
+#transaction, #name, #acount, #value{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #000000;
+}
+
+#transaction{
+    position: absolute;
+    left: 63px;
+}
+
+#name{
+    position: absolute;
+    left: 310px;
+}
+
+#acount{
+    position: absolute;
+    left: 526px;
+}
+
+#value{
+    position: absolute;
+    left: 753px;
+}
+
+.content-type, .content-name, .content-value{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.positive{
+    color: #0300A7;
+}
+
+.negative{
+    color: #C90000;
+}
+
+.acount-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ag-acount, .cc-acount{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
