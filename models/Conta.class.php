@@ -13,6 +13,7 @@ class Conta
         $this->numeroConta = $numeroConta;
         $this->saldo = $saldo;
         $this->possuiEmprestimo = $possuiEmprestimo;
+        
     }
 
     public static function get($con, $id)
@@ -54,11 +55,36 @@ class Conta
     }
 
     public static function buscarContaPorUsuario($con, $idUsuario){
-        $sql = "SELECT * FROM Conta WHERE idUsuario='$idUsuario'";
+        $sql = "SELECT * FROM Conta WHERE idUsuarioRef='$idUsuario'";
         $result = $con->query($sql);
         $row = $result->fetch();
 
-        return new Conta($row['agencia'], $row['numeroConta'], $row['saldo'], $row['existeEmprestimo']);
+        return $row['idConta'];
+    }
+
+    public static function adicionarSaldo($con, $idConta, $valorAdicionar)
+    {
+        $conta = Conta::get($con, $idConta);
+        $novo_valor = $conta->saldo + $valorAdicionar;
+        Conta::update($con, $idConta, $conta->agencia, $conta->numeroConta, $novo_valor, $conta->possuiEmprestimo);
+    }
+
+    public static function buscarContaPorAgenciaeNumero($con, $agencia, $numeroConta){
+        $sql = "SELECT * FROM Conta WHERE agencia='$agencia' AND numeroConta='$numeroConta'";
+        $result = $con->query($sql);
+        $row = $result->fetch();
+        return $row['idConta'];
+    }
+
+    public static function realizarTransferencia($con, $idRemetente, $idDestinatario, $valor){
+        $contaRemetente = Conta::get($con, $idRemetente);
+        $contaDestinatario = Conta::get($con, $idDestinatario);
+
+        $saldoRemetente = $contaRemetente->saldo - $valor;
+        $saldoDestinatario = $contaDestinatario->saldo + $valor;
+
+        Conta::update($con, $idRemetente, $contaRemetente->agencia, $contaRemetente->numeroConta, $saldoRemetente, $contaRemetente->possuiEmprestimo);
+        Conta::update($con, $idDestinatario, $contaDestinatario->agencia, $contaDestinatario->numeroConta, $saldoDestinatario, $contaDestinatario->possuiEmprestimo);
     }
 }
 ?>
