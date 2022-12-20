@@ -33,6 +33,8 @@ $login_cookie = $_SESSION["login"];
         $usuario = Usuario::get($connection,$login_cookie);
         $idConta = Conta::buscarContaPorUsuario($connection, $login_cookie);
         $conta = Conta::get($connection, $idConta);
+        $_SESSION['idConta'] = $idConta;
+
     ?>
     <div class="black-effect"></div>
     <div class="background-im"><img src="../assets/images/gta-money-1366x768.png" alt="background-im"></div>
@@ -132,9 +134,6 @@ $login_cookie = $_SESSION["login"];
                     <h2 id="text-value">Valor:</h2>
                     <form action="../interface_integration/adicionar_saldo.php" method="POST">
                         <input id="input-value" type="number" name="input-value" value="0">
-                        <?php
-                        $_SESSION['idConta'] = $idConta;
-                        ?>
                         <button type="submit" id="add-money" >Adicionar</button>
                     </form>
 
@@ -179,25 +178,28 @@ $login_cookie = $_SESSION["login"];
                 <div class="modal-transfer-body">
                     <h2 id="transfer-title">Para qual conta deseja transferir?</h2>
                     <div class="agcc-container">
+                    <form action="../interface_integration/realizar_transferencia.php" method="POST">
                         <div class="ag-container">
                             <h2 id="ag-text">Agência:</h2>
-                            <input id="ag-input"/>
+                            <input id="ag-input" name="agenciaDestino"/>
                         </div>
                         <div class="cc-container">
                             <h2 id="cc-text">Conta:</h2>
-                            <input id="cc-input"/>
+                            <input id="cc-input" name="contaDestino"/>
                         </div>
                     </div>
                     <h2 id="value-transfer-title">Qual valor você deseja transfeir?</h2>
                     <div class="value-transfer-container">
-                        <h2 id="value-text-transfer">Valor:</h2>
-                        <input id="value-input-transfer"/>
+                        <h2 id="value-text-transfer" >Valor:</h2>
+                        <input id="value-input-transfer" name="valor"/>
                     </div>
+                    
                 </div>
                 <div class="division-modal-container">
                     <hr class="division-modal-line-botton"/>
                 </div>
-                <div id="transfer-money">Transferir</div>
+                <button id="transfer-money" type="submit">Transferir</button>
+                </form>
                 <div id="closePixModal">Cancelar</div>
             </div>
 
