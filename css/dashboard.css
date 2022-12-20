@@ -451,6 +451,10 @@ body {
     color: #7DA968;
 }
 
+.suggestions-buttons:hover{
+    transform: scale(1.03);
+}
+
 .division-modal-line-botton{
     position: absolute;
     width: 619px;
@@ -486,6 +490,10 @@ body {
     bottom: 21px;
 }
 
+#close-modal:hover, #closePixModal:hover{
+    transform: scale(1.03);
+}
+
 #add-money, #transfer-money{
     display: flex;
     justify-content: center;
@@ -499,6 +507,12 @@ body {
     background: rgba(125, 169, 104, 0.81);
     border: 2px solid #000000;
     border-radius: 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+#add-money:hover, #transfer-money:hover{
+    transform: scale(1.03);
 }
 
 #add-money{
@@ -555,6 +569,10 @@ body {
     align-items: center;
 }
 
+.ag-container:hover, .cc-container:hover{
+    transform: scale(1.03);
+}
+
 #ag-text, #cc-text, #value-text-transfer{
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -582,6 +600,10 @@ body {
     flex-direction: row;
     width: 233px;
     height: 30px;
+}
+
+.value-transfer-container:hover{
+    transform: scale(1.03);
 }
 
 #value-input-transfer{
