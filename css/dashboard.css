@@ -487,14 +487,9 @@ body {
 }
 
 #add-money, #transfer-money{
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 103px;
-    height: 51px;
-    right: 71px;
-    bottom: 21px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -504,6 +499,22 @@ body {
     background: rgba(125, 169, 104, 0.81);
     border: 2px solid #000000;
     border-radius: 10px;
+}
+
+#add-money{
+    position: absolute;
+    width: 103px;
+    height: 51px;
+    right: -160px;
+    bottom: -240px;
+}
+
+#transfer-money{
+    position: absolute;
+    width: 103px;
+    height: 51px;
+    right: 71px;
+    bottom: 21px;
 }
 /*Fim da estilização do modal de adicionar dinheiro*/
 
@@ -524,7 +535,11 @@ body {
     
     color: #7DA968;
 }
-
+.form-container{
+    display: flex;
+    width: 380px;
+    justify-content: space-between;
+}
 .agcc-container{
     display: flex;
     justify-content: space-between;
@@ -556,6 +571,8 @@ body {
     background: #FFFFFF;
     border: 2px solid rgba(125, 169, 104, 0.81);
     border-radius: 10px;
+    font-size: 20px;
+    padding-left: 8px;
 }
 
 .value-transfer-container{
@@ -573,6 +590,8 @@ body {
     background: #FFFFFF;
     border: 2px solid rgba(125, 169, 104, 0.81);
     border-radius: 10px;
+    font-size: 20px;
+    padding-left: 8px;
 }
 
 /* Posicionamento dos elementos do body do modal de transferencia */
