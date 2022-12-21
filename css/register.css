@@ -90,6 +90,7 @@
     width: 256.53px;
     height: 293.09px;
     top: 190px;
+    left: 91px;
 }
 
 .inputForms{
@@ -142,7 +143,7 @@ a {
 
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-
+    left: -62px;
     border: none;
     border-radius: 3px;
     background: rgba(175, 217, 164, 1);
