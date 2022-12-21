@@ -154,11 +154,11 @@ error_reporting(E_ALL);
                     </div>
 
                     <h2 class="content-value <?php
-                        echo $enviado? 'positive' : 'negative';
+                        echo !$enviado? 'positive' : 'negative';
                     ?> "> <?php if ($enviado) {
-                        echo '+';
-                    } else {
                         echo '-';
+                    } else {
+                        echo '+';
                     }?>R$ <?php echo $transf->valor?></h2>
                 </div>
 

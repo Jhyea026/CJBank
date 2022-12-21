@@ -15,7 +15,6 @@
     <?php
     require_once "../dbmanager/connectdb.php";
     require_once "../models/Usuario.class.php";
-    $usuario = new Usuario($nome, $cpf, $dataNascimento, $senha);
 
     ?>
 
@@ -33,20 +32,20 @@
             <div class="formsContainer" onsubmit="">
                 <div class="inputForms">
                     <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" name="cpf" value="<?php echo $usuario->cpf ?? ''; ?>">
+                    <input type="text" id="cpf" name="cpf" value="">
                 </div>
                 <div class="inputForms">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" value=" <?php echo $usuario->nome ?? ''; ?>">
+                    <input type="text" id="nome" name="nome" value="">
                 </div>
 
                 <div class="inputForms">
                     <label for="login">Data de nascimento</label>
-                    <input type="date" id="dataNasc" name="dataNasc" value="<?php echo $usuario->dataNascimento ?? ''; ?>">
+                    <input type="date" id="dataNasc" name="dataNasc" value="">
                 </div>
                 <div class="inputForms">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" value="<?php echo $usuario->senha ?? '';?>">
+                    <input type="password" id="senha" name="senha" value="">
                 </div>
             </div>
             <div class="submitContainer">
